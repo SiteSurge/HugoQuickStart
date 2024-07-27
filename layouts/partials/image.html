@@ -1,0 +1,6 @@
+{{ $paint1 := resources.Get "images/gallery/paint1.jpeg" }}
+<img
+  src="{{ $paint1.RelPermalink }}"
+  width="{{ $paint1.Width }}"
+  height="{{ $paint1.Height }}"
+/>

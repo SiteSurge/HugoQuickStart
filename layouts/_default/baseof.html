@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html
+  lang="{{ or site.Language.LanguageCode }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}"
+  class="min-vh-100"
+>
+  <head>
+    {{ partial "head.html" . }} {{ partial "style.html" . }}
+  </head>
+  <body class="min-vh-100 d-flex flex-column justify-content-between">
+    {{ partial "header.html" . }}
+    <main class="flex-grow-1">{{ block "main" . }}{{ end }}</main>
+
+    {{ partial "footer.html" . }} {{ partial "site-scripts.html" . }}
+  </body>
+</html>
